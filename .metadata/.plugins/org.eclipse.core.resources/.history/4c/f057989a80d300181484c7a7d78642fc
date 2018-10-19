@@ -1,0 +1,24 @@
+package com.qa;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class createUser {
+	
+	@FindBy(xpath="//*[@id=\"username\"]")
+	private WebElement userName;
+
+	@FindBy(name="password1")
+	private WebElement passWord;
+	
+	
+	public void username(String text) {
+		userName.sendKeys(text);
+	}
+	
+	public void password(String text) {
+		passWord.sendKeys(text);
+	}
+	
+	
+
+}

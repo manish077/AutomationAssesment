@@ -1,0 +1,30 @@
+package com.qa;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class manageUsers {
+	
+	@FindBy(xpath = "//*[@id=\"main-panel\"]/div[17]/a")
+	private WebElement manageUsers;
+	
+	@FindBy(xpath = "//*[@id=\"j_username\"]")
+	private WebElement userName;
+	
+	@FindBy(xpath = "/html/body/div/div/form/div[2]/input")
+	private WebElement passWord;
+	
+	
+	public void goToUsers() {
+		manageUsers.click();
+	}
+	
+	public void username(String text) {
+		userName.sendKeys(text);
+	}
+	
+	public void password(String text) {
+		passWord.sendKeys(text);
+	}
+			
+
+}

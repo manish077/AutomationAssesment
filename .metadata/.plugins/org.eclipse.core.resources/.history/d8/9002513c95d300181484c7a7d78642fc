@@ -1,0 +1,72 @@
+package com.qa;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class createUser {
+	
+	@FindBy(name="username")
+	private WebElement userName;
+
+	@FindBy(name="password1")
+	private WebElement passWord1;
+	
+	@FindBy(name="password2")
+	private WebElement passWord2;
+	
+	@FindBy(name="fullname")
+	private WebElement fullName;
+	
+	@FindBy(name="email")
+	private WebElement emailI;
+	
+	@FindBy(id="//*[@id=\"yui-gen1-button\"]")
+	private WebElement createButton;
+	
+	@FindBy(xpath="//*[@id=\"people\"]/tbody/tr[1]/th[2]/a")
+	private WebElement sortTable;
+	
+	@FindBy(xpath="//*[@id=\"people\"]/tbody/tr[2]/td[2]/a")
+	private WebElement users;
+	
+	
+	
+	public void username(String text) {
+		userName.sendKeys(text);
+	}
+	
+	public void password1(String text) {
+		passWord1.sendKeys(text);
+	}
+	
+	public void password2(String text) {
+		passWord2.sendKeys(text);
+	}
+	
+	public void fullname(String text) {
+		fullName.sendKeys(text);
+	}
+	
+	public void email(String text) {
+		emailI.sendKeys(text);
+	}
+	
+	public void createButton() {
+		createButton.submit();
+	}
+	
+	public void sortTable() {
+		sortTable.click();
+	}
+	
+	public  WebElement users() {
+		return users;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}
